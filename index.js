@@ -33,6 +33,9 @@ client.connect(err => {
       res.send(items)
     })
   })
+  app.get('/', (req, res) => {
+    res.send("hello from db it's working working")
+})
   app.get('/admin',(req, res)=>{
     admintcollection.find()
     .toArray((error , items)=>{
